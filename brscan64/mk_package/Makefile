@@ -31,7 +31,7 @@ brscan: \
 	sh makepackage 1 d
 	mkdir -p ../RELEASE
 	cp -p linux-4.19-amd64/brscan-*.deb  ../RELEASE
-	cp -p linux-4.19-x86_64/brscan-*.rpm ../RELEASE
+#	cp -p linux-4.19-x86_64/brscan-*.rpm ../RELEASE
 
 brscan2: \
 ../backend_brscan2/.libs/libsane-brother2.so.1.0.7 \
@@ -48,10 +48,10 @@ brscan2: \
 ../netconfig/brsaneconfig2
 	rm -f brscan2
 	sh makepackage 2 d
-	sh makepackage 2 r
+#	sh makepackage 2 r
 	mkdir -p ../RELEASE
 	cp -p linux-4.19-amd64/brscan2-*.deb ../RELEASE
-	cp -p linux-4.19-x86_64/brscan2-*.rpm ../RELEASE
+#	cp -p linux-4.19-x86_64/brscan2-*.rpm ../RELEASE
 
 
 clean1:
@@ -86,8 +86,8 @@ Brsane2.ini ext1.ini ext2.ini brsanenetdevice2.cfg setupSaneScan2:
 
 brscand:
 	sh makepackage 1 d
-	sh makepackage 1 r
+#	sh makepackage 1 r
 brscan2d:
 	sh makepackage 2  d
-	sh makepackage 2  r
+#	sh makepackage 2  r
 # DO NOT DELETE
