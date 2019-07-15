@@ -58,6 +58,8 @@
 # include <unistd.h>
 #endif
 
+#undef HAVE_SYS_IO_H
+#undef HAVE_ASM_IO_H
 #ifdef HAVE_SYS_IO_H
 # include <sys/io.h>	/* use where available (glibc 2.x, for example) */
 #elif HAVE_ASM_IO_H
