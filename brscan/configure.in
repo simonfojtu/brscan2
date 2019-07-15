@@ -367,7 +367,7 @@ AC_SUBST(V_MINOR)
 AC_SUBST(V_REV)
 AC_SUBST(DLL_PRELOAD)
 
-AC_OUTPUT([Makefile lib/Makefile sanei/Makefile backend_brscan/Makefile  
+AC_OUTPUT([Makefile lib/Makefile sanei/Makefile  
 	   backend_brscan2/Makefile 
            include/Makefile po/Makefile ],)
 
