@@ -62,6 +62,8 @@
 #include <unistd.h>
 #endif
 
+#undef HAVE_SYS_IO_H
+#undef HAVE_ASM_IO_H
 #ifdef HAVE_SYS_IO_H
 #include <sys/io.h>
 #elif HAVE_ASM_IO_H
