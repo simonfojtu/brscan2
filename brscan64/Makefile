@@ -60,7 +60,7 @@ brscan2:include\
 	(ln -s ../../brscan/libbrcolm2/GrayCmData libbrcolm2/GrayCmData)
 	(cd backend_brscan2 && make brscan2)
 	(cd mk_package  && make brscan2)
-	(rm libbrcolm/GrayCmData)
+#	(rm libbrcolm/GrayCmData)
 
 make_brscan64_configure_date:
 	ln -s ../brscan/acinclude.m4
