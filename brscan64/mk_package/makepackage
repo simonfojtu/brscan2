@@ -46,8 +46,7 @@ fi
 VER=`cat $LISTFILE.list | grep "%version" | sed s/'%version '//g`
 RELEASE_NUM=`cat $LISTFILE.list | grep %release| sed s/'%release '//g`
 
-OS=redhat
-RELEASE_DIR="linux-2.6-"$arch
+RELEASE_DIR="linux-4.19-"$arch
 #BUILDDIR="$RELEASE_DIR"/RPMS/x86_64
 
 
@@ -61,17 +60,17 @@ echo ""
 if [ $dstr = 'r' ];then
 	if [ "$RELEASE_NUM" = "0" ]
 	then
-		SRC_NAME=linux-2.6-x86_64.rpm
+		SRC_NAME=linux-4.19-x86_64.rpm
 	else
-		SRC_NAME=`echo NUM-linux-2.6-x86_64.rpm | eval sed 's/NUM/"$RELEASE_NUM"/'`
+		SRC_NAME=`echo NUM-linux-4.19-x86_64.rpm | eval sed 's/NUM/"$RELEASE_NUM"/'`
 	fi
 	DST_NAME=`echo TEMP1.x86_64.TEMP2 | eval sed -e 's/TEMP1/"$RELEASE_NUM"/' -e 's/TEMP2/"$PACK_FORMAT"/'`
 elif [ $dstr = 'd' ];then
 	if [ "$RELEASE_NUM" = "0" ]
 	then
-		SRC_NAME=linux-2.6-amd64.deb
+		SRC_NAME=linux-4.19-amd64.deb
 	else
-		SRC_NAME=`echo NUM-linux-2.6-amd64.deb | eval sed 's/NUM/"$RELEASE_NUM"/'`
+		SRC_NAME=`echo NUM-linux-4.19-amd64.deb | eval sed 's/NUM/"$RELEASE_NUM"/'`
 	fi
 	DST_NAME=`echo TEMP1.amd64.TEMP2 | eval sed -e 's/TEMP1/"$RELEASE_NUM"/' -e 's/TEMP2/"$PACK_FORMAT"/'`
 fi
